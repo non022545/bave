@@ -37,9 +37,12 @@
       border-radius: 50px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       text-align: center;
-
     }
 
+    #all {
+      padding: 20px;
+      /* เพิ่มระยะห่างภายในกรอบ */
+    }
 
     .container.visible {
       opacity: 1;
@@ -78,19 +81,10 @@
       /* ขยายให้พอดีกับความกว้างของคอนเทนเนอร์ */
       max-width: 520px;
       /* กำหนดขนาดสูงสุด */
+      height: auto;
+      /* ปรับความสูงตามสัดส่วนของภาพ */
     }
 
-    /* #showall {
-      display: flex; */
-    /* justify-content: center; */
-    /* จัดตำแหน่งกลางในแนวนอน */
-    /* align-items: center; */
-    /* จัดตำแหน่งกลางในแนวตั้ง */
-    /* height: 100px; */
-    /* กำหนดความสูงเต็มหน้าจอ */
-    /* width: 500px;
-      margin-left: 1000px;
-    } */
     #inter-container {
       display: flex;
       justify-content: center;
@@ -109,16 +103,16 @@
     }
 
     #allshow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   </style>
 </head>
 
 <body>
   <div>
-    <div class="top-bar">แนะนำตัวเอง77755</div>
+    <div class="top-bar">แนะนำตัวเอง</div>
 
     <div id="allshow">
       <button id="showall" class="btn">แสดงทั้งหมด</button>
