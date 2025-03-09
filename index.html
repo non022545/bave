@@ -8,9 +8,170 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="any1m.css">
-  
+
   <style>
-    
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      /* ให้ body ขยายเต็มจอ */
+      display: flex;
+      justify-content: center;
+      /* จัดตรงกลางแนวนอน */
+      align-items: center;
+      /* จัดตรงกลางแนวตั้ง */
+      background: linear-gradient(45deg, #ee2eff, #ff58de, #ff75aa, #ff7eb3, #ff5ca8, #fc298b);
+      background-size: 500% 100%;
+      animation: gradientMove 10s ease infinite;
+      height: 100%;
+      /* ทำให้ทั้ง html และ body ใช้พื้นที่เต็มหน้าจอ */
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      /* ไม่ให้เลื่อนในแนวนอน */
+    }
+
+    .container1 {
+      margin: auto;
+      height: 700px;
+      width: 1000px;
+      padding: 50px;
+      text-align: center;
+
+    }
+
+    .heart {
+      height: 500px;
+      margin: auto;
+    }
+
+    #showall {
+      margin: auto;
+    }
+
+    @keyframes gradientMove {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 100px auto;
+      padding: 50px;
+      background: white;
+      border-radius: 50px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      background: linear-gradient(45deg, #f6a2fd, #f6c3ec, #f89ec0, #f8b5d1, #fd8cc1, #fba7ce);
+      background-size: 500% 200%;
+      animation: gradientMove 10s ease infinite;
+      position: relative;
+      z-index: 2;
+    }
+
+    .container.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #7b1fa2;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #7b1fa2;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #9c27b0;
+    }
+
+    #bibi {
+      display: none;
+      margin: 0 auto;
+      display: block;
+      width: 100%;
+      /* ขยายให้พอดีกับความกว้างของคอนเทนเนอร์ */
+      max-width: 520px;
+      /* กำหนดขนาดสูงสุด */
+      height: auto;
+      /* ปรับความสูงตามสัดส่วนของภาพ */
+
+    }
+
+    #inter-container {
+      display: flex;
+      justify-content: center;
+      /* จัดตำแหน่งภาพกลางแนวนอน */
+      align-items: center;
+      /* จัดตำแหน่งภาพกลางแนวตั้ง */
+      height: 100vh;
+      /* ให้คอนเทนเนอร์มีความสูงเต็มหน้าจอ */
+    }
+
+    #inter {
+      max-width: 100%;
+      /* ทำให้ภาพไม่เกินขนาดของคอนเทนเนอร์ */
+      height: auto;
+      /* ปรับขนาดภาพตามสัดส่วน */
+    }
+
+    #allshow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 25%;
+    }
+
+    /* ปรับ overlay-img ให้อยู่ข้างหลัง container */
+    .overlay-img {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200vh;
+      height: 150vh;
+      object-fit: cover;
+      opacity: 0.8;
+      pointer-events: none;
+      z-index: 1;
+      /* น้อยกว่า container */
+    }
+
+    .back {
+      background-color: #ff0088;
+      height: 50px;
+      width: 100px;
+      border-radius: 20px;
+      border: 5px solid white;
+      margin-left: 600px;
+      background: linear-gradient(45deg, #ef42ff, #ff79b7, #ff0f83);
+      background-size: 1000% 200%;
+      animation: gradientMove 10s ease infinite;
+      color: white;
+      margin-top: 20px;
+    }
   </style>
 </head>
 
@@ -59,8 +220,60 @@
       </div>
     </div>
   </div>
- 
- <script src="/any1y.js"></script>
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // ซ่อนข้อความเมื่อโหลดหน้าเว็บ
+      document.getElementById('pi').style.display = 'none';
+
+      // เมื่อคลิกปุ่ม "#more"
+      document.getElementById('more').addEventListener('click', function () {
+        var pi = document.getElementById('pi');
+        if (pi.style.display === 'none') {
+          pi.style.display = 'block'; // แสดงข้อความ
+        } else {
+          pi.style.display = 'none'; // ซ่อนข้อความ
+        }
+      });
+
+      document.getElementById('bibi').style.display = 'none';
+
+      document.getElementById('bibishow').addEventListener('click', function () {
+        var bibi = document.getElementById('bibi');
+        if (bibi.style.display === 'none') {
+          bibi.style.display = 'block'; // แสดงข้อความ
+        } else {
+          bibi.style.display = 'none'; // ซ่อนข้อความ
+        }
+      });
+
+      document.getElementById('all').style.display = 'none';
+
+      document.getElementById('showall').addEventListener('click', function () {
+        var all = document.getElementById('all');
+        var letgo = document.getElementById('letgo');
+        if (all.style.display === 'none') {
+          all.style.display = 'block';
+          letgo.style.display = 'none'; // ซ่อนปุ่ม "แสดงทั้งหมด"
+        } else {
+          all.style.display = 'none';
+        }
+      });
+
+
+
+      document.getElementById('back').addEventListener('click', function () {
+        document.getElementById('all').style.display = 'none';
+        document.getElementById('letgo').style.display = 'block'; // แสดงหน้าแรก
+      });
+
+
+    });
+
+
+
+  </script>
 </body>
 
 </html>
