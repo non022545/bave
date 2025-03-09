@@ -1,139 +1,62 @@
 <!DOCTYPE html>
-<html lang="th">
-
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>แนะนำตัวเอง</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>Animated Background with Fullscreen PNG</title>
   <style>
     body {
-      font-family: 'Arial', sans-serif;
       margin: 0;
-      padding: 0;
-      background-image: url('images/99.jpg');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-    }
-
-    .top-bar {
-      background: linear-gradient(90deg, #7b1fa2, #9c27b0);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: sans-serif;
       color: white;
-      padding: 25px 20px;
-      text-align: center;
-      font-size: 24px;
-      font-weight: bold;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      font-size: 1.5rem;
+      position: relative;
+      overflow: hidden;
+      /* พื้นหลังไล่เฉดสีขยับ */
+      background: linear-gradient(45deg, #ee2eff, #f158ff, #ff75aa, #ff7eb3, #ff5ca8, #fc298b);
+      background-size: 600% 600%;
+      animation: gradientMove 10s ease infinite;
     }
 
-    .container {
-      max-width: 1000px;
-      margin: 100px auto;
-      padding: 50px;
-      background: white;
-      border-radius: 50px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      text-align: center;
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(30px);
-      transition: opacity 1s ease, transform 1s ease, visibility 1s ease;
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
-
-    .container.visible {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
-
-    .profile-img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
+    /* รูป PNG เต็มจอ */
+    .overlay-img {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200vh;
+      height: 150vh;
       object-fit: cover;
-      border: 4px solid #7b1fa2;
+      opacity: 0.8; /* ปรับโปร่งใส */
+      pointer-events: none; /* ไม่ให้รบกวนการคลิก */
+      z-index: 1; /* ให้อยู่เหนือพื้นหลัง */
     }
 
-    .btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 20px;
-      background: #7b1fa2;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #9c27b0;
+    /* เนื้อหาอยู่บนสุด */
+    .content {
+      position: relative;
+      z-index: 2;
     }
   </style>
 </head>
-
 <body>
-  <div>
-    <div class="top-bar">แนะนำตัวเอง77755</div>
-    <div class="container fade-in">
-      <img id="pgg" src="images/bibi.webp" alt="" height="850px" width="520px">
-      <h2>ชื่อของคุณ</h2>
-      <p>สวัสดี! ฉันคือ [ชื่อของคุณ] ฉันสนใจการพัฒนาเว็บไซต์และเทคโนโลยีใหม่ ๆ</p>
-      <button id="more" class="btn">ดูเพิ่มเติม</button>
-      <p id="pi">สวัสดี! ฉันคือ [ชื่อของคุณ] ฉันสนใจการพัฒนาเว็บไซต์และเทคโนโลยีใหม่ ๆ</p>
-    </div>
-    <div class="container fade-in">
-      <h2>ประสบการณ์</h2>
-      <p>ฉันเคยทำงานในด้านการพัฒนาเว็บไซต์มากกว่า 3 ปี และมีความเชี่ยวชาญในการใช้ HTML, CSS, JavaScript รวมถึง Framework
-        ต่าง ๆ เช่น React และ Vue</p>
-    </div>
 
-    <div class="container fade-in">
-      <h2>ทักษะ</h2>
-      <ul style="text-align: left; max-width: 600px; margin: 0 auto;">
-        <li>HTML / CSS / JavaScript</li>
-        <li>React / Vue</li>
-        <li>Node.js / Express</li>
-        <li>Git / GitHub</li>
-      </ul>
-    </div>
+  <!-- รูป PNG เต็มจอ -->
+  <img class="overlay-img" src="images/ruv.png" alt="Overlay Image">
 
-    <div class="container fade-in">
-      <h2>ติดต่อ</h2>
-      <p>อีเมล: yourname@email.com</p>
-      <p>โทร: 012-345-6789</p>
-    </div>
+  <!-- เนื้อหาทับ PNG -->
+  <div class="content">
+    พื้นหลังขยับได้ 🎨
   </div>
 
-  <script>
-    
-      // สร้าง observer เพื่อสังเกตเมื่อกล่องเข้าในมุมมอง
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            // เมื่อกล่องเข้าสู่หน้าจอให้เพิ่มคลาส 'visible'
-            entry.target.classList.add('visible');
-          }
-        });
-      }, { threshold: 0 }); // ตรวจสอบเมื่อกล่องเริ่มเข้าในมุมมอง
-
-      // เริ่มต้นการสังเกตการณ์กับทุกกล่องที่มีคลาส 'fade-in'
-      document.querySelectorAll('.container').forEach(container => {
-        observer.observe(container);
-      });
-      $(document).ready(function () {
-        // ซ่อนข้อความเมื่อโหลดหน้าเว็บ
-        $('#pi').hide(); 
-        
-        // เมื่อคลิกปุ่ม "#more"
-        $('#more').click(function() {
-            $('#pi').toggle(); // แสดงหรือซ่อนข้อความ
-        });
-    });
-     
-  </script>
 </body>
-
 </html>
