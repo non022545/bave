@@ -37,7 +37,7 @@ body {
 }
 
 .ani {
-    margin: 100px auto;
+
     width: 100%;
     height: 350px;
     gap: 10px;
@@ -77,15 +77,14 @@ body {
 
 .container {
     padding: 50px 50px;
-    background-color: rgb(255, 95, 95);
+
 
 }
 
 .pagebox {
-    max-width: 700px;
-    margin: 100px auto;
+    max-width: 500px;
+    margin: 10px auto;
     padding: 50px;
-    background: white;
     border-radius: 50px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -119,19 +118,17 @@ body {
 }
 
 .btn {
-    margin: 100px;
-    padding: 10px 50px;
     background: #7b1fa2;
     color: white;
     text-decoration: none;
     border-radius: 5px;
     transition: 0.3s;
-    
+
 }
 
 .menu img {
     width: 100%;
-    height: 100px;
+    height: 100%;
 }
 
 /* .menu {
@@ -190,7 +187,8 @@ body {
 
 .btnback {
     display: flex;
-    justify-content: flex-end; /* จัดให้ img ชิดขวา */
+    justify-content: flex-end;
+    /* จัดให้ img ชิดขวา */
 }
 
 .btnback img {
@@ -214,10 +212,20 @@ body {
     margin-top: 20px;
 } */
 
-.vdo1y {
+/* .vdo1y {
     width: 100%;
     max-width: 100%;
     height: auto;
+} */
+
+.vdo1y {
+    width: 100%;
+    border-radius: 20px;
+    border: 5px solid white;
+}
+
+.vdobox {
+    width: 100%;
 }
 
 .textinput {
@@ -238,17 +246,24 @@ body {
     color: rgb(255, 0, 200);
     font-weight: bolder;
 }
-.homepagebox{
+
+.homepagebox {
     align-items: center;
     justify-items: center;
-}
-.heart {
-   width: 100%; 
- 
-}
-.showall {
 
 }
+
+.boxheart {
+
+    height: 550px;
+}
+
+.heart {
+    height: 100%;
+
+
+}
+
 .btnall {
     padding: 50px;
     width: 100%;
@@ -256,4 +271,142 @@ body {
     align-items: center;
     justify-items: center;
     background-color: #7b1fa2;
+}
+
+.playmusic {
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-items: center;
+
+}
+
+.btncontainer {
+    display: flex;
+
+}
+
+.btnplay img {
+    margin: 0 5px;
+    /* เพิ่มระยะห่างระหว่างแต่ละปุ่ม */
+    height: 50px;
+}
+
+.loader {
+    width: 50%;
+    height: 22px;
+    border-radius: 40px;
+    color: #da2acb;
+    background: linear-gradient(45deg, #000000, #551b77, #140f3a);
+    background-size: 1000% 200%;
+    animation: gradientMove 10s ease infinite;
+    border: 2px solid;
+    position: relative;
+}
+
+
+
+.btnplay:hover {
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+
+}
+
+.loader::before {
+    content: "";
+    position: absolute;
+    margin: 2px;
+    width: 25%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+    background: currentColor;
+    animation: l3 4s infinite linear;
+}
+
+@keyframes l3 {
+    50% {
+        left: 100%;
+        transform: translateX(calc(-100% - 4px))
+    }
+}
+
+/* HTML: <div class="loader"></div> */
+.boxlovebibi {
+    width: 100%;
+    padding: 0px 100px;
+    display: flex;
+    /* ใช้ Flexbox */
+    justify-content: center;
+    /* จัดให้อยู่ตรงกลางแนวนอน */
+    align-items: center;
+    /* จัดให้อยู่ตรงกลางแนวตั้ง (หากมีความสูง) */
+
+}
+
+.lovebibi {
+    width: fit-content;
+    font-size: 30px;
+    font-family: monospace;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #d100e400;
+    background: conic-gradient(#d8007e 0 0) 0/0 100% no-repeat text;
+    animation: l11 2s steps(8, jump-none) infinite;
+}
+
+.lovebibi:before {
+    content: "LOVE BIBII";
+}
+
+@keyframes l11 {
+    to {
+        background-size: 100% 100%
+    }
+}
+
+
+
+.boxphlovebibi {
+    width: 100%;
+    display: flex;
+    /* ใช้ Flexbox */
+    justify-content: center;
+    /* จัดให้อยู่ตรงกลางแนวนอน */
+    align-items: center;
+    /* จัดให้อยู่ตรงกลางแนวตั้ง (หากมีความสูง) */
+
+}
+
+.phlovebibi {
+    margin-top: 10px;
+    width: fit-content;
+    font-size: 30px;
+    font-family: monospace;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #d100e400;
+    background: conic-gradient(#d8007e 0 0) 0/0 100% no-repeat text;
+    animation: l11 2s steps(8, jump-none) infinite;
+}
+
+.phlovebibi:before {
+    content: "1 Year Anniversary";
+}
+
+@keyframes l11 {
+    to {
+        background-size: 100% 100%
+    }
+}
+
+.textany p {
+    font-family: monospace;
+   
+}
+.textany h2 {
+    color: #ff0095;
+   
 }

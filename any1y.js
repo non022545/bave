@@ -37,31 +37,31 @@ document.addEventListener("DOMContentLoaded", function () {
     //     }
     // });
    
-    document.getElementById('ph1y').style.display = 'none';
+    // document.getElementById('ph1y').style.display = 'none';
 
-    document.getElementById('bibishow').addEventListener('click', function () {
-      var ph1y = document.getElementById('ph1y');
-      if (ph1y.style.display === 'none') {
-        ph1y.style.display = 'block'; // แสดงข้อความ
-      } else {
-        ph1y.style.display = 'none'; // ซ่อนข้อความ
-      }
-    });
+    // document.getElementById('bibishow').addEventListener('click', function () {
+    //   var ph1y = document.getElementById('ph1y');
+    //   if (ph1y.style.display === 'none') {
+    //     ph1y.style.display = 'block'; // แสดงข้อความ
+    //   } else {
+    //     ph1y.style.display = 'none'; // ซ่อนข้อความ
+    //   }
+    // });
 
     document.getElementById('all').style.display = 'none';
 
-    document.getElementById('showall').addEventListener('click', function () {
-      var all = document.getElementById('all');
-      var letgo = document.getElementById('letgo');
-      var back2 = document.getElementById('back2');
-      if (all.style.display === 'none') {
-        all.style.display = 'block';
-        letgo.style.display = 'none'; // ซ่อนปุ่ม "แสดงทั้งหมด"
-        back2.style.display = 'none';
-      } else {
-        all.style.display = 'none';
-      }
-    });
+    // document.getElementById('showall').addEventListener('click', function () {
+    //   var all = document.getElementById('all');
+    //   var letgo = document.getElementById('letgo');
+    //   var back2 = document.getElementById('back2');
+    //   if (all.style.display === 'none') {
+    //     all.style.display = 'block';
+    //     letgo.style.display = 'none'; // ซ่อนปุ่ม "แสดงทั้งหมด"
+    //     back2.style.display = 'none';
+    //   } else {
+    //     all.style.display = 'none';
+    //   }
+    // });
 
 document.getElementById('cont2').style.display = 'none'
 
@@ -125,3 +125,8 @@ document.getElementById('cont2').style.display = 'none'
 
   });
 
+
+    document.addEventListener("DOMContentLoaded", function () {
+        let audio = document.getElementById("bg-music");
+        audio.play().catch(error => console.log("Autoplay ถูกบล็อก", error));
+    });

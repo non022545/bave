@@ -9,92 +9,140 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="any1m.css">
+  <style>
 
+  </style>
 </head>
 
 <body>
-  <div id="allall">
-    <div id="letgo" class="homepagebox">
-      <img class="heart" src="images/heart.png" alt="">
-      <br><br>
-     <div class="showall">
+  
+  <main>
+    <audio id="bg-music" loop>
+      <source src="video/ตีหนึ่งที่คูเมือง.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <div id="allall">
+      <div id="letgo" class="homepagebox">
+        <div class="boxheart">
+        <img class="heart" src="images/heart.png" alt="">
+      </div>
+        <br><br>
+        <!-- <div class="showall">
        <button id="showall" class="btnall">แสดงทั้งหมด</button>
-     </div>
-      <div class="inlove">
-        <input class="textinput" type="text" id="textinput" placeholder="พิมพ์ 'วว/ดด/ปปปป' ที่คบกัน">
-        <button id="submitbtn" class="submitbtn">submit</button>
+     </div> -->
+        <div class="inlove">
+          <input class="textinput" type="text" id="textinput" placeholder="พิมพ์ 'วว/ดด/ปปปป' ที่คบกัน">
+          <button id="submitbtn" class="submitbtn">submit</button>
+        </div>
       </div>
-    </div>
 
-    <div id="all" class="container">
-      <!-- <button class="back" id="back1">กลับ1</button> -->
-      <!-- <button class="back" id="back2">กลับ2</button> -->
-      <div class="btnback">
-        <img id="back1" src="images/back.png" alt="">
-        <img id="back2" src="images/back.png" alt="">
-      </div>
-      <div id="cont1" class="pagebox">
+      <div id="all" class="container">
+        <!-- <button class="back" id="back1">กลับ1</button> -->
+        <!-- <button class="back" id="back2">กลับ2</button> -->
+        <div class="btnback">
+          <img id="back1" src="images/back.png" alt="">
+          <img id="back2" src="images/back.png" alt="">
+        </div>
+        <div id="cont1" class="pagebox">
 
-        <div class="menu">
-          <div id="menu1">
-            <img src="images/vdo.png" alt="">
-          </div>
-          <div id="menu2">
-            <img src="images/Pic.png" alt="">
-          </div>
-          <div id="menu3">
-            <img src="images/text.png" alt="">
-          </div>
-          <!-- <button id="menu1" class="menu">menu1</button>
+          <div class="menu">
+            <div id="menu1">
+              <img src="images/vdo.png" alt="">
+            </div>
+            <div id="menu2">
+              <img src="images/Pic.png" alt="">
+            </div>
+            <div id="menu3">
+              <img src="images/text.png" alt="">
+            </div>
+            <!-- <button id="menu1" class="menu">menu1</button>
         <br><br>
         <button id="menu2" class="menu">menu2</button>
         <br><br>
         <button id="menu3" class="menu">menu3</button> -->
-        </div>
-      </div>
-
-      <div id="cont2" class="pagebox">
-        <div class="ani">
-          <img class="bb" src="images/b6.jpg" alt="">
-          <img class="bb" src="images/b2.jpg" alt="">
-          <img class="bb" src="images/b3.jpg" alt="">
-          <img class="bb" src="images/b4.jpg" alt="">
-          <img class="bb" src="images/b5.jpg" alt="">
+          </div>
         </div>
 
-      </div>
+        <div id="cont2" class="pagebox">
+          <div class="ani">
+            <img class="bb" src="images/b6.jpg" alt="">
+            <img class="bb" src="images/b2.jpg" alt="">
+            <img class="bb" src="images/b3.jpg" alt="">
+            <img class="bb" src="images/b4.jpg" alt="">
+            <img class="bb" src="images/b5.jpg" alt="">
+          </div>
+          <div class="boxphlovebibi">
+            <div class="phlovebibi"></div>
+          </div>
+        </div>
 
-      <div id="cont3" class="pagebox">
-        <button id="bibishow" class="btn">กดสิจ๊ะ</button>
-        <br><br>
-        <video id="ph1y" class="vdo1y" src="https://www.youtube.com/watch?v=PBZFGmJKgAo&list=RDLhJMZ00otZM&index=2" controls></video>
+        <div id="cont3" class="pagebox">
+          <!-- <button id="bibishow" class="btn">กดสิจ๊ะ</button>
+        <br>
+        <br> -->
+          <div class="vdobox">
+            <!-- <video id="ph1y" class="vdo1y" src="video/1m.mp4" controls></video>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/PBZFGmJKgAo" frameborder="0" allowfullscreen></iframe>
-
-        <!-- <br><br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/mi6GTW_k8A0" frameborder="0" allowfullscreen></iframe> -->
+            <iframe id="p1y" class="vdo1y" width="100%" height="315" src="https://www.youtube.com/embed/mi6GTW_k8A0"
+              frameborder="0" allowfullscreen></iframe>
+              <!-- <iframe id="p1y" class="vdo1" width="100%" height="315" src="https://www.youtube.com/embed/mi6GTW_k8A0"
+              frameborder="0" ></iframe>
+               -->
+              <div class="boxlovebibi">
+                <div class="lovebibi"></div>
+              </div>
+              <!-- <br><br>
         <button id="more" class="btn">กดอีกก</button>
         <br><br>
         <video id="vdo1y" class="vdo1y" src="/images/1m.mp4" controls></video> -->
-      </div>
+          </div>
 
-      <!-- <div id="cont4" class="container2">
+        </div>
+
+        <!-- <div id="cont4" class="container2">
         <img class="bb" src="/images/b6.jpg" alt="">
         <img class="bb" src="/images/b2.jpg" alt="">
         <img class="bb" src="/images/b3.jpg" alt="">
         <img class="bb" src="/images/b4.jpg" alt="">
         <img class="bb" src="/images/b5.jpg" alt="">
       </div> -->
-      <div id="cont4" class="pagebox">
-        <div id="textany">
-          <h2>สุขสันต์วันครบรอบ 1 ปี</h2>
-          <br>
-          <p>สุขสันต์วันครบรอบ 1 ปีนะที่รักขอให้ทุกวันของเรามีแต่ความสุขและความรักที่เติบโตขึ้นเรื่อย ๆ อยู่ด้วยกันมา 1
-            ปีแล้วน้าถึงจะทะเลาะกันบ่อยแต่ก็รักที่สุดเลยนะ</p>
+        <div id="cont4" class="pagebox">
+          <div id="textany" class="textany">
+            <h2>สุขสันต์วันครบรอบ 1 ปี</h2>
+            <br>
+            <p>สุขสันต์วันครบรอบ 1 ปีนะที่รักขอให้ทุกวันของเรามีแต่ความสุขและความรักที่เติบโตขึ้นเรื่อย ๆ อยู่ด้วยกันมา
+              1
+              ปีแล้วน้าถึงจะทะเลาะกันบ่อยแต่ก็รักที่สุดเลยนะ</p>
+          </div>
         </div>
-
+        
       </div>
     </div>
-  </div>
-  <script src="any1y.js"></script>
+    
+    <div class="playmusic">
+      <div class="loader"></div>
+      <br>
+      <div class="btncontainer">
+        <div class="btnplay">
+          <img src="images/retrun.png" alt="เล่นใหม่"
+            onclick="document.getElementById('bg-music').currentTime = 0; document.getElementById('bg-music').play()">
+        </div>
+        <div class="btnplay">
+          <img src="images/run.png" alt="เล่นเพลง" onclick="document.getElementById('bg-music').play()">
+        </div>
+        <div class="btnplay">
+          <img src="images/stop.png" alt="หยุดเพลง" onclick="document.getElementById('bg-music').pause()">
+        </div>
+      </div>
+
+      <audio id="bg-music" src="path/to/your/musicfile.mp3"></audio>
+
+    </div>
+  </main>
+
+  <script src="/any1y.js"></script>
 </body>
 
 </html>
