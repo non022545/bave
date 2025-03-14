@@ -126,10 +126,19 @@ body {
 
 }
 
+
 .menu img {
     width: 100%;
     height: 100%;
+    
 }
+
+.btnmenu img:hover {
+    border-radius: 100px;
+    padding: 5px;
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8)); /* เรืองแสงตามรูปร่าง PNG */
+}
+
 
 /* .menu {
     display: inline-block;
@@ -195,6 +204,11 @@ body {
     width: 80px;
 }
 
+.btnback img:hover {
+    width: 90px;
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8)); /* เรืองแสงตามรูปร่าง PNG */
+
+}
 
 /* .back {
     font-weight: bolder;
@@ -235,17 +249,29 @@ body {
     text-align: center;
 }
 
+.textinput:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* ขอบเรืองแสงสีขาว */
+    transition: box-shadow 0.3s ease-in-out; /* ทำให้เอฟเฟกต์นุ่มนวล */
+}
+
 .submitbtn {
     height: 50px;
     width: 60px;
     border: none;
     border-radius: 10px;
-    background: linear-gradient(45deg, #ffab2c, #ff8800, #ffd667);
-    background-size: 1000% 200%;
-    animation: gradientMove 10s ease infinite;
+    background: linear-gradient(45deg, #ffd597, #ff8800, #ffd667);
+    background-size: 500% 200%;
+    animation: gradientMove 5s ease infinite;
     color: rgb(255, 0, 200);
     font-weight: bolder;
 }
+
+.submitbtn:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* ขอบเรืองแสงสีขาว */
+    transition: box-shadow 0.3s ease-in-out; /* ทำให้เอฟเฟกต์นุ่มนวล */
+}
+
+
 
 .homepagebox {
     align-items: center;
@@ -260,8 +286,11 @@ body {
 
 .heart {
     height: 100%;
+}
 
+.heart:hover {
 
+    filter: drop-shadow(0 0 55px rgba(255, 255, 255, 0.8)); /* เรืองแสงตามรูปร่าง PNG */
 }
 
 .btnall {
@@ -293,6 +322,14 @@ body {
     height: 50px;
 }
 
+.btnplay img:hover {
+    
+    border-radius: 50%;
+    height: 60px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* ขอบเรืองแสงสีขาว */
+    transition: box-shadow 0.3s ease-in-out; /* ทำให้เอฟเฟกต์นุ่มนวล */
+}
+
 .loader {
     width: 50%;
     height: 22px;
@@ -307,11 +344,7 @@ body {
 
 
 
-.btnplay:hover {
-    background-color: rgb(0, 0, 0);
-    border-radius: 50%;
 
-}
 
 .loader::before {
     content: "";
