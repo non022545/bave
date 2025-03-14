@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  
+
   <main>
     <audio id="bg-music" loop>
       <source src="video/ตีหนึ่งที่คูเมือง.mp3" type="audio/mpeg">
@@ -22,17 +22,19 @@
 
     <div id="allall">
       <div id="letgo" class="homepagebox">
-        <div class="boxheart">
-        <img class="heart" src="images/heart.png" alt="">
-      </div>
+        <div id="cont0" class="pagebox1">
+          <div class="boxheart">
+            <img class="heart" src="images/heart.png" alt="">
+          </div>
+          <div class="inlove">
+            <input class="textinput" type="text" id="textinput" placeholder="'วว/ดด/ปปปป' ที่คบกัน">
+            <button id="submitbtn" class="submitbtn">submit</button>
+          </div>
+        </div>
         <br><br>
         <!-- <div class="showall">
-       <button id="showall" class="btnall">แสดงทั้งหมด</button>
-     </div> -->
-        <div class="inlove">
-          <input class="textinput" type="text" id="textinput" placeholder="'วว/ดด/ปปปป' ที่คบกัน">
-          <button id="submitbtn" class="submitbtn">submit</button>
-        </div>
+        <button id="showall" class="btnall">แสดงทั้งหมด</button>
+         </div> -->
       </div>
 
       <div id="all" class="container">
@@ -85,13 +87,13 @@
         <iframe width="560" height="315" src="https://www.youtube.com/embed/mi6GTW_k8A0" frameborder="0" allowfullscreen></iframe> -->
             <iframe id="p1y" class="vdo1y" width="100%" height="315" src="https://www.youtube.com/embed/mi6GTW_k8A0"
               frameborder="0" allowfullscreen></iframe>
-              <!-- <iframe id="p1y" class="vdo1" width="100%" height="315" src="https://www.youtube.com/embed/mi6GTW_k8A0"
+            <!-- <iframe id="p1y" class="vdo1" width="100%" height="315" src="https://www.youtube.com/embed/mi6GTW_k8A0"
               frameborder="0" ></iframe>
                -->
-              <div class="boxlovebibi">
-                <div class="lovebibi"></div>
-              </div>
-              <!-- <br><br>
+            <div class="boxlovebibi">
+              <div class="lovebibi"></div>
+            </div>
+            <!-- <br><br>
         <button id="more" class="btn">กดอีกก</button>
         <br><br>
         <video id="vdo1y" class="vdo1y" src="/images/1m.mp4" controls></video> -->
@@ -115,7 +117,7 @@
               ปีแล้วน้าถึงจะทะเลาะกันบ่อยแต่ก็รักที่สุดเลยนะ</p>
           </div>
         </div>
-        
+
       </div>
     </div>
     <div class="playmusic">
@@ -133,7 +135,7 @@
           <img src="images/stop.png" alt="หยุดเพลง" onclick="document.getElementById('bg-music').pause()">
         </div>
       </div>
-   
+
 
     </div>
   </main>

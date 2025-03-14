@@ -130,13 +130,14 @@ body {
 .menu img {
     width: 100%;
     height: 100%;
-    
+
 }
 
 .btnmenu img:hover {
     border-radius: 100px;
     padding: 5px;
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8)); /* เรืองแสงตามรูปร่าง PNG */
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8));
+    /* เรืองแสงตามรูปร่าง PNG */
 }
 
 
@@ -206,7 +207,8 @@ body {
 
 .btnback img:hover {
     width: 90px;
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8)); /* เรืองแสงตามรูปร่าง PNG */
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8));
+    /* เรืองแสงตามรูปร่าง PNG */
 
 }
 
@@ -250,8 +252,10 @@ body {
 }
 
 .textinput:hover {
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* ขอบเรืองแสงสีขาว */
-    transition: box-shadow 0.3s ease-in-out; /* ทำให้เอฟเฟกต์นุ่มนวล */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    /* ขอบเรืองแสงสีขาว */
+    transition: box-shadow 0.3s ease-in-out;
+    /* ทำให้เอฟเฟกต์นุ่มนวล */
 }
 
 .submitbtn {
@@ -267,30 +271,50 @@ body {
 }
 
 .submitbtn:hover {
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* ขอบเรืองแสงสีขาว */
-    transition: box-shadow 0.3s ease-in-out; /* ทำให้เอฟเฟกต์นุ่มนวล */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    /* ขอบเรืองแสงสีขาว */
+    transition: box-shadow 0.3s ease-in-out;
+    /* ทำให้เอฟเฟกต์นุ่มนวล */
 }
 
-
-
-.homepagebox {
-    align-items: center;
-    justify-items: center;
+.pagebox1 {
+    justify-content: center;
+    height: 500px;
+    max-width: 500px;
 
 }
 
 .boxheart {
-
-    height: 550px;
-}
-
-.heart {
+    display: flex;
+    justify-content: center;
+    /* จัดให้อยู่ตรงกลางแนวนอน */
+    align-items: center;
+    /* จัดให้อยู่ตรงกลางแนวตั้ง */
+    width: 100%;
+  
+    text-align: center;
     height: 100%;
 }
 
+.heart {
+    width: 800px;
+    /* ปรับขนาดให้เหมาะสม */
+    max-width: 250%;
+    /* ป้องกันการล้น */
+}
+
+
 .heart:hover {
 
-    filter: drop-shadow(0 0 55px rgba(255, 255, 255, 0.8)); /* เรืองแสงตามรูปร่าง PNG */
+    filter: drop-shadow(0 0 55px rgba(255, 255, 255, 0.8));
+    /* เรืองแสงตามรูปร่าง PNG */
+}
+
+.inlove {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
 }
 
 .btnall {
@@ -305,16 +329,38 @@ body {
 .playmusic {
     display: flex;
     flex-direction: column;
-    align-items: center; /* จัดให้อยู่กึ่งกลางตามแนวตั้ง */
-    justify-content: center; /* จัดให้อยู่กึ่งกลางตามแนวนอน */
+    align-items: center;
+    /* จัดให้อยู่กึ่งกลางตามแนวตั้ง */
+    justify-content: center;
+    /* จัดให้อยู่กึ่งกลางตามแนวนอน */
     margin-top: 20px;
     width: 100%;
-  }
-  .btncontainer {
+}
+
+.homepagebox {
+    align-items: center;
+    justify-items: center;
+
+}
+
+.playmusic {
     display: flex;
-    justify-content: center; /* จัดปุ่มให้อยู่กึ่งกลาง */
-    gap: 10px; /* ระยะห่างระหว่างปุ่ม */
-  }
+    flex-direction: column;
+    align-items: center;
+    /* จัดให้อยู่กึ่งกลางตามแนวตั้ง */
+    justify-content: center;
+    /* จัดให้อยู่กึ่งกลางตามแนวนอน */
+    margin-top: 20px;
+    width: 100%;
+}
+
+.btncontainer {
+    display: flex;
+    justify-content: center;
+    /* จัดปุ่มให้อยู่กึ่งกลาง */
+    gap: 10px;
+    /* ระยะห่างระหว่างปุ่ม */
+}
 
 .btnplay img {
     margin: 0 5px;
@@ -323,11 +369,13 @@ body {
 }
 
 .btnplay img:hover {
-    
+
     border-radius: 50%;
     height: 60px;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* ขอบเรืองแสงสีขาว */
-    transition: box-shadow 0.3s ease-in-out; /* ทำให้เอฟเฟกต์นุ่มนวล */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    /* ขอบเรืองแสงสีขาว */
+    transition: box-shadow 0.3s ease-in-out;
+    /* ทำให้เอฟเฟกต์นุ่มนวล */
 }
 
 .loader {
@@ -437,9 +485,12 @@ body {
 
 .textany p {
     font-family: monospace;
-   
+
 }
+
 .textany h2 {
     color: #ff0095;
-   
+
 }
+
+.
