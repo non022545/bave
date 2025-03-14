@@ -246,6 +246,7 @@ body {
 
 .textinput {
     height: 50px;
+    width: 250px;
     border-radius: 10px;
     border: none;
     text-align: center;
